@@ -1,0 +1,224 @@
+/* ==========================================
+   Quiz App Styles
+   This is done for you! Don't touch this file.
+   ========================================== */
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+  padding: 40px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 36px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* The view system */
+.view {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.view.active {
+  display: block;
+  opacity: 1;
+}
+
+h1 {
+  color: #4338ca;
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+h2, .live-score {
+  color: #4338ca;
+  font-size: 22px;
+}
+
+.subtitle {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #c7d2fe;
+  margin-bottom: 28px;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.info-card ul {
+  text-align: left;
+  color: #4338ca;
+  padding-left: 24px;
+  margin-bottom: 0;
+}
+
+.info-card li {
+  margin: 8px 0;
+}
+
+.primary-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.primary-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Quiz view */
+.quiz-header {
+  margin-bottom: 24px;
+}
+
+.progress {
+  text-align: center;
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.question, .live-score {
+  font-size: 20px;
+  text-align: center;
+  margin: 24px 0;
+  line-height: 1.4;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.choice-btn {
+  padding: 14px 18px;
+  background: white;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1f2937;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: #eef2ff;
+  border-color: #6366f1;
+  transform: translateX(4px);
+}
+
+.choice-btn.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #14532d;
+  font-weight: bold;
+}
+
+.choice-btn.wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #7f1d1d;
+}
+
+.choice-btn:disabled {
+  cursor: not-allowed;
+}
+
+.feedback {
+  text-align: center;
+  font-weight: bold;
+  min-height: 24px;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.feedback.correct { color: #16a34a; }
+.feedback.wrong { color: #dc2626; }
+
+/* Results view */
+.score-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto;
+  font-size: 48px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.score-total {
+  font-size: 24px;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+.score-message {
+  text-align: center;
+  font-size: 18px;
+  color: #4338ca;
+  font-weight: bold;
+  margin-bottom: 28px;
+}

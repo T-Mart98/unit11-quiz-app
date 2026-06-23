@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App - Unit 11</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HOME VIEW -->
+    <section id="homeView" class="view active">
+      <h1>🧠 Quick Quiz</h1>
+      <p class="subtitle">Test your knowledge with 5 questions!</p>
+      <div class="info-card">
+        <h2>How it works:</h2>
+        <ul>
+          <li>Answer 5 multiple choice questions</li>
+          <li>See your final score at the end</li>
+          <li>No time limit, just have fun!</li>
+        </ul>
+      </div>
+      <button id="startBtn" class="primary-btn">Start Quiz</button>
+    </section>
+
+    <!-- QUIZ VIEW -->
+    <section id="quizView" class="view">
+      <div class="quiz-header">
+        <p class="progress" id="progressText">Question 1 of 5</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <h2 id="questionText" class="question"></h2>
+
+      <div id="choicesList" class="choices"></div>
+
+      <p id="feedbackText" class="feedback"></p>
+
+      <h3 id="liveScore" class="live-score"></h3>
+
+      <button id="nextBtn" class="primary-btn" disabled>Next Question</button>
+    </section>
+
+    <!-- RESULTS VIEW -->
+    <section id="resultsView" class="view">
+      <h1 id="resultTitle">Quiz Complete!</h1>
+      <div class="score-circle">
+        <span id="scoreNumber">0</span>
+        <span class="score-total">/ 5</span>
+      </div>
+      <p id="scoreMessage" class="score-message"></p>
+      <button id="restartBtn" class="primary-btn">Play Again</button>
+    </section>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
