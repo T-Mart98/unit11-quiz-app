@@ -54,6 +54,7 @@
 //
 // Write your questions array here (need at least 5):
 
+//arrays for the general knowledge questions
 const questions = [
   {
     question: "What color is an airplane black box?",
@@ -128,6 +129,8 @@ const questions = [
 // - scoreNumber, scoreMessage
 //
 // Write your code here:
+
+//state variables + DOM references for the quiz
 let currentQuestion = 0;
 let score = 0;
 let hasAnswered = false;
@@ -157,6 +160,7 @@ const scoreMessage = document.getElementById("scoreMessage");
 //
 // Write your goToView function here:
 
+//goToView function
 function goToView(viewId) {
   document.querySelectorAll(".view").forEach(view => {
     view.classList.remove("active");
@@ -202,6 +206,8 @@ function goToView(viewId) {
 //
 // Write your displayQuestion function here:
 
+
+//display question function
 function displayQuestion() {
   let q = questions[currentQuestion];
 
@@ -263,6 +269,8 @@ function displayQuestion() {
 //
 // Write your handleAnswer function here:
 
+
+//handle answer function with bonus challenge
 function handleAnswer(pickedIndex, clickedBtn) {
   if (hasAnswered) return;   
   hasAnswered = true;
@@ -334,6 +342,8 @@ function handleAnswer(pickedIndex, clickedBtn) {
 //
 // Write these four functions here:
 
+
+//the four functions
 function startQuiz() {
   currentQuestion = 0;
   score = 0;
@@ -379,6 +389,7 @@ function resetQuiz() {
 //
 // Write your event listeners here:
 
+//event listeners for the buttons
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", nextQuestion);
 restartBtn.addEventListener("click", resetQuiz);
